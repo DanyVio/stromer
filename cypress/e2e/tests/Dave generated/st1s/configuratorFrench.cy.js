@@ -1,4 +1,4 @@
-let config = Cypress.config()
+let config = Cypress.config();
 describe('Bike Configurator', function () {
 
   beforeEach('before each test', function () {
@@ -8,26 +8,26 @@ describe('Bike Configurator', function () {
       .click();
   });
 
-//Select a language and country
+  //Select a language and country
 
-  it('Select language', function ()  {
+  it('Select language', function () {
     cy.get('#block-multiswitcher-2')
       .should('be.visible')
       .click();
-  
+
     cy.get('#aos-locale-multi-switcher-form--2 .custom-js-dropdown.custom-js-dropdown-language')
       .should('be.visible')
       .click();
 
-    cy.get('#aos-locale-multi-switcher-form--2 .custom-js-dropdown-option.custom-js-dropdown-language-option').contains('Deutsch')
+    cy.get('#aos-locale-multi-switcher-form--2 .custom-js-dropdown-option.custom-js-dropdown-language-option').contains('Français')
       .should('be.visible')
       .click();
-      
+
     cy.get('#aos-locale-multi-switcher-form--2 [cdata-selector-target="aos-multi-switcher-country-selector"]')
       .should('be.visible')
       .click();
 
-    cy.get('#aos-locale-multi-switcher-form--2 .custom-js-dropdown-option.custom-js-dropdown-country-options').contains('Germany')
+    cy.get('#aos-locale-multi-switcher-form--2 .custom-js-dropdown-option.custom-js-dropdown-country-options').contains('France')
       .should('be.visible')
       .click();
 
@@ -36,69 +36,56 @@ describe('Bike Configurator', function () {
       .click();
   });
 
-//Select a  ST3 E-bike
+  //Select an E-bike
 
-  it('Your Stromer -> ST3', function () {
-    cy.get('#block-menureferencesbycountry > :nth-child(2) > :nth-child(2) > :nth-child(1)')
-      .should('be.visible')
-      .click();
-    cy.location().should(loc => {
-        expect(loc.pathname).to.equal('/en/configurator-model-select');
-    });
-  
-    cy.get(':nth-child(2) > .paragraph--type--aospcc01 > .container > :nth-child(1) > .col-lg-12 > .grid-container > .row > :nth-child(1) > .str-custom-input-wrapper > .str-custom-input > .str-custom-input-inner > .str-custom-input-content > .aospci-content--links > .field > .field__item > .ghost-link')
-      .trigger('mouseover')
-      .should('be.visible')
-      .click();
-
-//Configure the bike
-// Frame color Cool White 
-// Option 1 -> 
-
-
-cy.get('[for="Farbe_lg"]')
-      .should('be.visible')
-      .click();
-    cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st10lg.jpg');
-
-    cy.get('[for="Rahmenart_sp"]')
-      .should('be.visible')
-      .click();
-    cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st10lg.jpg');
-
+  it('Your Stromer -> ST1', function () {
+    cy.visit(`${config.baseUrl}`+'/fr/configurator?bike=st1s');
+    
     cy.get('[for="Rahmengrösse_m0"]')
       .should('be.visible')
       .click();
-    cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st10lgspm0.jpg');
+    cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st1sdpspm0.jpg');
 
-    cy.get('[for="Federgabel_nf"]')
+    cy.get('[for="Rahmengrösse_l0"]')
       .should('be.visible')
       .click();
-    cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st10lgspm0.jpg');
 
-    cy.get('[for="Sattelstütze_ns"]')
-      .should('be.visible')
-      .click();
-    cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st10lgspm0.jpg');
+    // The end of the options
 
-    // Battery range
-
-    cy.get('[for="Reichweite_12"]')
+    cy.get('#upgradesButton')
+      .contains('Prochaine étape')
       .should('be.visible')
       .click();
-    cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st10lgspm0.jpg');
-    cy.get('[for="Reichweite_15"]')
-      .should('be.visible')
-      .click();
-    cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st10lgspm0.jpg');
-    cy.get('[for="Reichweite_18"]')
-      .should('be.visible')
-      .click();
-    cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st10lgspm0.jpg');
-    
       
-// Testing all the Extras to see if the images are corresponding with the product shown.
+    cy.get('#upgradeOptionl1').should('be.visible');
+    cy.get('#upgradeOptionl1 > .upgradeOptionImg > img').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/upgrade/l1.jpg');
 
+    cy.get('#upgradeOptionl2').should('be.visible');
+    cy.get('#upgradeOptionl2 > .upgradeOptionImg > img').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/upgrade/l2.jpg');
+
+    cy.get('#upgradeOptionV1').should('be.visible');
+    cy.get('#upgradeOptionV1 > .upgradeOptionImg > img').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/upgrade/V1.jpg');
+
+    cy.get('#upgradeOptionV2').should('be.visible');
+    cy.get('#upgradeOptionV2 > .upgradeOptionImg > img').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/upgrade/V2.jpg');
+
+    cy.get('#upgradeOptionV3').should('be.visible');
+    cy.get('#upgradeOptionV3 > .upgradeOptionImg > img').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/upgrade/V3.jpg');
+
+    cy.get('#upgradeOptionV4').should('be.visible');
+    cy.get('#upgradeOptionV4 > .upgradeOptionImg > img').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/upgrade/V4.jpg');
+
+    cy.get('#upgradeOptionf1').should('be.visible');
+    cy.get('#upgradeOptionf1 > .upgradeOptionImg > img').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/upgrade/f1.jpg');
+
+      
+      
+    cy.get('.invoiceFooter > .configuratorButton')
+      .contains('Prochaine étape')
+      .should('be.visible')
+      .click();
+
+    // Testing all the Extras to see if the images are corresponding with the product shown.
     cy.get(':nth-child(1) > .extraImg > img').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/extra/b983.jpg');
     cy.get(':nth-child(2) > .extraImg > img').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/extra/b814.jpg');
     cy.get(':nth-child(3) > .extraImg > img').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/extra/b655.jpg');
@@ -111,17 +98,16 @@ cy.get('[for="Farbe_lg"]')
     cy.get(':nth-child(10) > .extraImg > img').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/extra/pist.jpg');
     cy.get(':nth-child(11) > .extraImg > img').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/extra/piwt.jpg');
     cy.get(':nth-child(12) > .extraImg > img').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/extra/pigt.jpg');
-    cy.get(':nth-child(13) > .extraImg > img').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/extra/steg.jpg');
-    cy.get(':nth-child(14) > .extraImg > img').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/extra/an20.jpg');
+    cy.get(':nth-child(13) > .extraImg > img').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/extra/ta75.jpg');
+    cy.get(':nth-child(14) > .extraImg > img').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/extra/steg.jpg');
     cy.get(':nth-child(15) > .extraImg > img').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/extra/an40.jpg');
     cy.get(':nth-child(16) > .extraImg > img').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/extra/be13.jpg');
     cy.get(':nth-child(17) > .extraImg > img').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/extra/be16.jpg');
 
 
     cy.get('.extrasInvoice > .configuratorButton')
-      .contains('Next step')
+      .contains('Prochaine étape')
       .should('be.visible')
       .click();
   });
 });
-  

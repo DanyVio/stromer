@@ -36,26 +36,12 @@ describe('Bike Configurator', function () {
       .click();
   });
 
-  //Select a  ST1 E-bike
-
-  it('Your Stromer -> ST1', function () {
-    cy.get('#block-menureferencesbycountry > :nth-child(2) > :nth-child(2) > :nth-child(1)')
-      .should('be.visible')
-      .click();
-    cy.location().should(loc => {
-      expect(loc.pathname).to.equal('/en/configurator-model-select');
-    });
-
-    cy.get(':nth-child(2) > .paragraph--type--aospcc01 > .container > :nth-child(1) > .col-lg-12 > .grid-container > .row > :nth-child(4) > .str-custom-input-wrapper > .str-custom-input > .str-custom-input-inner > .str-custom-input-content > .aospci-content--links > .field > .field__item > .ghost-link')
-      .trigger('mouseover')
-      .should('be.visible')
-      .click();
-
     // Configure the bike ST1
     // Frame Color Light Grey
-    // 9 Options
 
-    // Option 1
+    
+  it('Your Stromer -> ST1', function () {
+      cy.visit(`${config.baseUrl}`+'/de/configurator?bike=st10');
 
     cy.get('[for="Farbe_lg"]')
       .should('be.visible')
@@ -1202,11 +1188,11 @@ describe('Bike Configurator', function () {
     // The end of the options
 
     cy.get('button')
-      .contains('Next step')
+      .contains('Nächster Schritt')
       .should('be.visible')
       .click();
     cy.get('.invoiceFooter > .configuratorButton')
-      .contains('Next step')
+      .contains('Nächster Schritt')
       .should('be.visible')
       .click();
 
@@ -1232,7 +1218,7 @@ describe('Bike Configurator', function () {
     cy.get(':nth-child(18) > .extraImg > img').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/extra/be16.jpg');
 
     cy.get('.extrasInvoice > .configuratorButton')
-      .contains('Next step')
+      .contains('Nächster Schritt')
       .should('be.visible')
       .click();
 
