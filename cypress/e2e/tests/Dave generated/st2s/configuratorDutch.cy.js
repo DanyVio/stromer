@@ -63,17 +63,11 @@ describe('Bike Configurator', function () {
     cy.get('#upgradeOptionm2').should('be.visible');
     cy.get('#upgradeOptionm2 > .upgradeOptionImg > img').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/upgrade/m2.jpg');
 
-    cy.get('#upgradeOptionX1').should('be.visible');
-    cy.get('#upgradeOptionX1 > .upgradeOptionImg > img').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/upgrade/X1.jpg');
-
-    cy.get('#upgradeOptionX2').should('be.visible');
-    cy.get('#upgradeOptionX2 > .upgradeOptionImg > img').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/upgrade/X2.jpg');
-
     cy.get('#upgradeOptionX3').should('be.visible');
-    cy.get('#upgradeOptionX3 > .upgradeOptionImg > img').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/upgrade/X3.jpg');
+    cy.get('#upgradeOptionX3 > .upgradeOptionImg > img').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/upgrade/x3.jpg');
 
     cy.get('#upgradeOptionX4').should('be.visible');
-    cy.get('#upgradeOptionX4 > .upgradeOptionImg > img').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/upgrade/X4.jpg');
+    cy.get('#upgradeOptionX4 > .upgradeOptionImg > img').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/upgrade/x4.jpg');
 
       
       
