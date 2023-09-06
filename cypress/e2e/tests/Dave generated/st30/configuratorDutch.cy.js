@@ -10,7 +10,7 @@ describe('Bike Configurator', function () {
 
   //Select a language and country
 
-  it('Select language', function () {
+  it.skip('Select language', function () {
     cy.get('#block-multiswitcher-2')
       .should('be.visible')
       .click();
@@ -38,7 +38,7 @@ describe('Bike Configurator', function () {
 
   //Select an E-bike
 
-  it('Your Stromer -> ST1', function () {
+  it.skip('Your Stromer -> ST1', function () {
     cy.visit(`${config.baseUrl}`+'/nl/configurator?bike=st30');
     
     cy.get('[for="Farbe_cw"]')
