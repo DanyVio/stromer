@@ -38,7 +38,7 @@ describe('Bike Configurator', function () {
 
   //Select an E-bike
 
-  it('Your Stromer -> ST1', function () {
+  it('Your Stromer', function () {
     cy.visit(`${config.baseUrl}`+'/en/configurator?bike=st2s');
     
     cy.get('[for="Federgabel_nf"]')

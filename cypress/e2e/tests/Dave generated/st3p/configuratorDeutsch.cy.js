@@ -38,7 +38,7 @@ describe('Bike Configurator', function () {
 
   //Select an E-bike
 
-  it('Your Stromer -> ST1', function () {
+  it('Your Stromer', function () {
     cy.visit(`${config.baseUrl}`+'/de/configurator?bike=st3p');
     
     cy.get('[for="Rahmengrösse_m0"]')
