@@ -36,7 +36,7 @@ describe('Bike Configurator', function () {
       .click();
   });
 
-  //Select a  ST1 E-bike
+  //Select a  ST2 E-bike
 
   it('Your Stromer -> ST2', function () {
     cy.get('#block-menureferencesbycountry > :nth-child(2) > :nth-child(2) > :nth-child(1)')
