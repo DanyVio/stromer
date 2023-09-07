@@ -1186,11 +1186,11 @@ describe('Bike Configurator', function () {
     // The end of the options
 
     cy.get('button')
-      .contains('Next step')
+      .contains('Volgende stap')
       .should('be.visible')
       .click();
     cy.get('.invoiceFooter > .configuratorButton')
-      .contains('Next step')
+      .contains('Volgende stap')
       .should('be.visible')
       .click();
 
@@ -1216,7 +1216,7 @@ describe('Bike Configurator', function () {
     cy.get(':nth-child(18) > .extraImg > img').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/extra/be16.jpg');
 
     cy.get('.extrasInvoice > .configuratorButton')
-      .contains('Next step')
+      .contains('Volgende stap')
       .should('be.visible')
       .click();
 
