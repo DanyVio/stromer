@@ -8,6 +8,7 @@ describe('Bike Configurator', function () {
       .click();
   });
 
+
   //Select a language and country
 
   it('Select language', function () {
