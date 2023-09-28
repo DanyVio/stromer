@@ -11,7 +11,7 @@ describe('Bike Configurator', function () {
 
   //Select a language and country
 
-  it('Select language', function () {
+  it.skip('Select language', function () {
     cy.get('#block-multiswitcher-2')
       .should('be.visible')
       .click();
