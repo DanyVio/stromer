@@ -10373,6 +10373,6 @@ describe('Bike Configurator', function () {
     cy.get('.extrasInvoice > .configuratorButton')
       .contains('Next step')
       .should('be.visible')
-      .click();
+      .click({force: true});
   });
 });

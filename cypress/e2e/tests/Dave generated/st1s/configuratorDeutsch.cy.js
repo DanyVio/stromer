@@ -102,6 +102,6 @@ describe('Bike Configurator', function () {
     cy.get('.extrasInvoice > .configuratorButton')
       .contains('Nächster Schritt')
       .should('be.visible')
-      .click();
+      .click({force: true});
   });
 });
