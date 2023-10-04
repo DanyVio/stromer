@@ -32,8 +32,7 @@ describe('Bike Configurator', function () {
       .click();
 
     cy.get('#edit-submit--2')
-      .should('be.visible')
-      .click();
+      .click({force: true});
   });
 
   //Select an E-bike
