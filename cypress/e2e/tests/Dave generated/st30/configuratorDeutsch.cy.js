@@ -8,10 +8,9 @@ describe('Bike Configurator', function () {
       .click();
   });
 
+    //Select a language and country
 
-  //Select a language and country
-
-  it.skip('Select language', function () {
+    it.skip('Select language', function () {
     cy.get('#block-multiswitcher-2')
       .should('be.visible')
       .click();
@@ -34,13 +33,13 @@ describe('Bike Configurator', function () {
 
     cy.get('#edit-submit--2')
       .click({force: true});
-  });
+    });
 
-  //Select an E-bike
+    //Select an E-bike
 
-  it('Your Stromer', function () {
+    it('Your Stromer', function () {
     cy.visit(`${config.baseUrl}`+'/de/configurator?bike=st30');
-    
+
     cy.get('[for="Farbe_cw"]')
       .should('be.visible')
       .click();
@@ -10374,5 +10373,5 @@ describe('Bike Configurator', function () {
       .contains('Nächster Schritt')
       .should('be.visible')
       .click({force: true});
-  });
-});
+    });
+    });
