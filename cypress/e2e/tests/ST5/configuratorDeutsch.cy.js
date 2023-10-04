@@ -42,7 +42,7 @@ describe('Bike Configurator', function () {
       .should('be.visible')
       .click();
     cy.location().should(loc => {
-        expect(loc.pathname).to.equal('/de/configurator-model-select');
+        expect(loc.pathname).to.equal('/en/configurator-model-select');
     });
   
     cy.get(':nth-child(1) > .paragraph--type--aospcc01 > .container > :nth-child(1) > .col-lg-12 > .grid-container > .row > :nth-child(2) > .str-custom-input-wrapper > .str-custom-input > .str-custom-input-inner > .str-custom-input-content > .aospci-content--links > .field > .field__item > .ghost-link')
