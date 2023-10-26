@@ -35,9 +35,9 @@ describe('Bike Configurator', function () {
       .click({force: true});
   });
 
-//Select a  ST5 E-bike
+//Select a  ST30 E-bike
 
-  it('Your Stromer -> ST5', function () {
+  it('Your Stromer -> ST30', function () {
     cy.get('#block-menureferencesbycountry > :nth-child(2) > :nth-child(2) > :nth-child(1)')
       .should('be.visible')
       .click();
