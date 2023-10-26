@@ -39,9 +39,9 @@ describe('Bike Configurator', function () {
       .click();
   });
 
-  //Select an E-bike
+  //Select an ST70 E-bike
 
-  it('Your Stromer -> ST1', function () {
+  it('Your Stromer -> ST70', function () {
     cy.visit(`${config.baseUrl}`+'/de/configurator?bike=st70');
     
     cy.get('[for="Rahmengrösse_l0"]')

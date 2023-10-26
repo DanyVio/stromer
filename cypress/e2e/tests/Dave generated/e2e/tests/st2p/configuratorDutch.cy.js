@@ -39,9 +39,9 @@ describe('Bike Configurator', function () {
       .click();
   });
 
-  //Select an E-bike
+  //Select an  ST2p E-bike
 
-  it('Your Stromer -> ST1', function () {
+  it('Your Stromer -> ST2p', function () {
     cy.visit(`${config.baseUrl}`+'/nl/configurator?bike=st2p');
     
     cy.get('[for="Farbe_dg"]')

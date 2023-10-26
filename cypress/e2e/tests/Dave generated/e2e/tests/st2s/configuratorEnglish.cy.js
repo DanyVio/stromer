@@ -39,9 +39,9 @@ describe('Bike Configurator', function () {
       .click();
   });
 
-  //Select an E-bike
+  //Select an ST2s E-bike
 
-  it('Your Stromer -> ST1', function () {
+  it('Your Stromer -> ST2s', function () {
     cy.visit(`${config.baseUrl}`+'/en/configurator?bike=st2s');
     
     cy.get('[for="Federgabel_fe"]')

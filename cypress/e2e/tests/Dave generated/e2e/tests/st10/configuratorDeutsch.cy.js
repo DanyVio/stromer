@@ -39,9 +39,9 @@ describe('Bike Configurator', function () {
       .click();
   });
 
-  //Select an E-bike
+  //Select an ST10 E-bike
 
-  it('Your Stromer -> ST1', function () {
+  it('Your Stromer -> ST10', function () {
     cy.visit(`${config.baseUrl}`+'/de/configurator?bike=st10');
     
     cy.get('[for="Farbe_dg"]')
