@@ -3,9 +3,12 @@ describe('Bike Configurator', function () {
 
   beforeEach('before each test', function () {
     cy.visit(`${config.baseUrl}`);
-    cy.get('#popup-buttons')
+    cy.get('.Popup__PopupCloseInsideInner-sc-17yhal5-5 button')
       .should('be.visible')
-      .click();
+      .click({ multiple: true });
+    cy.get('.agree-button')
+      .should('be.visible')
+      .click({ force: true });
   });
 
 //Select a language and country
