@@ -22,6 +22,9 @@ describe('Bike Configurator', function () {
 //Select a  ST5 E-bike
 
   it('Your Stromer -> ST5', function () {
+    cy.get('#edit-content--2 > .language-countries-options-container > [data-country="gb"][data-language="en"]')
+      .should('be.visible')
+      .click({ force: true });
     cy.get('#block-menureferencesbycountry > :nth-child(2) > :nth-child(2) > :nth-child(1)')
       .should('be.visible')
       .click({ force: true });

@@ -3,7 +3,7 @@ describe('Bike Configurator', function () {
 
   beforeEach('before each test', function () {
     cy.visit(`${config.baseUrl}`);
-    cy.get('#popup-buttons')
+    cy.get('.agree-button')
       .should('be.visible')
       .click({ force: true });
   });
@@ -11,7 +11,7 @@ describe('Bike Configurator', function () {
 //Select a language and country
 
   it('Select language', function ()  {
-    cy.get('#block-multiswitcher-2')
+    cy.get('#block-multiswitcher-2 > .aos-locale-multiswitcher-trigger > .flag')
       .should('be.visible')
       .click({ force: true });
     cy.get('#edit-content--2 > .language-countries-options-container > [data-country="ch"][data-language="de"]')
@@ -19,9 +19,12 @@ describe('Bike Configurator', function () {
       .click({ force: true });
   });
 
-//Select a  ST30 E-bike
+//Select a  ST5 E-bike
 
-  it('Your Stromer -> ST30', function () {
+  it('Your Stromer -> ST5', function () {
+    cy.get('#edit-content--2 > .language-countries-options-container > [data-country="ch"][data-language="de"]')
+      .should('be.visible')
+      .click({ force: true });
     cy.get('#block-menureferencesbycountry > :nth-child(2) > :nth-child(2) > :nth-child(1)')
       .should('be.visible')
       .click({ force: true });

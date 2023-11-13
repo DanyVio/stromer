@@ -24,6 +24,9 @@ describe('Bike Configurator', function () {
   
   it('Your Stromer -> ST1', function () {
     cy.visit(`${config.baseUrl}`+'/fr/configurator?bike=st10');
+    cy.get('#edit-content--2 > .language-countries-options-container > [data-country="fr"][data-language="fr"]')
+      .should('be.visible')
+      .click({ force: true });
 
     cy.get('[for="Farbe_lg"]')
       .should('be.visible')
