@@ -22,12 +22,13 @@ describe('Bike Configurator', function () {
 
   //Select an E-bike
 
-  it('Your Stromer -> ST1s', function () {
+  it('Your Stromer -> ST1', function () {
     cy.visit(`${config.baseUrl}`+'/nl/configurator?bike=st1s');
 
     cy.get('#edit-content--2 > .language-countries-options-container > [data-country="nl"][data-language="nl"]')
       .should('be.visible')
       .click();
+      
     cy.get('[for="Rahmengrösse_l0"]')
       .should('be.visible')
       .click();
