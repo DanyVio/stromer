@@ -3,7 +3,7 @@ describe('Bike Configurator', function () {
 
   beforeEach('before each test', function () {
     cy.visit(`${config.baseUrl}`);
-    cy.get(' #popup-buttons')
+    cy.get('#popup-buttons')
       .should('be.visible')
       .click({ multiple: true });
   });
@@ -15,22 +15,26 @@ describe('Bike Configurator', function () {
       .should('be.visible')
       .click();
 
-    cy.get('custom-language-option-item').contains('Switzerland')
+    cy.get('#edit-content--2 > .language-countries-options-container > [data-country="ch"][data-language="de"]')
       .should('be.visible')
       .click();
   });
 
   //Select an E-bike
 
-  it('Your Stromer -> ST1', function () {
+  it('Your Stromer -> ST1s', function () {
     cy.visit(`${config.baseUrl}`+'/de/configurator?bike=st1s');
+
+    cy.get('#edit-content--2 > .language-countries-options-container > [data-country="ch"][data-language="de"]')
+      .should('be.visible')
+      .click();
     
     cy.get('[for="Rahmengrösse_l0"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('[for="Rahmengrösse_m0"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st1sdpspm0.jpg');
 
 
@@ -39,7 +43,7 @@ describe('Bike Configurator', function () {
     cy.get('#upgradesButton')
       .contains('Nächster Schritt')
       .should('be.visible')
-      .click();
+      .click({ force: true });
       
     cy.get('#upgradeOptionl1').should('be.visible');
     cy.get('#upgradeOptionl1 > .upgradeOptionImg > img').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/upgrade/l1.jpg');
@@ -61,7 +65,7 @@ describe('Bike Configurator', function () {
     cy.get('.invoiceFooter > .configuratorButton')
       .contains('Nächster Schritt')
       .should('be.visible')
-      .click();
+      .click({ force: true });
 
     // Testing all the Extras to see if the images are corresponding with the product shown.
     cy.get(':nth-child(1) > .extraImg > img').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/extra/b983.jpg');
@@ -86,6 +90,6 @@ describe('Bike Configurator', function () {
     cy.get('.extrasInvoice > .configuratorButton')
       .contains('Nächster Schritt')
       .should('be.visible')
-      .click();
+      .click({ force: true });
   });
 });
