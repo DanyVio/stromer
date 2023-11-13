@@ -3,6 +3,9 @@ describe('Bike Configurator', function () {
 
   beforeEach('before each test', function () {
     cy.visit(`${config.baseUrl}`);
+    cy.get('.Popup__PopupCloseInsideInner-sc-17yhal5-5 button')
+      .should('be.visible')
+      .click({ multiple: true });
     cy.get('.agree-button')
       .should('be.visible')
       .click({ force: true });
@@ -36,188 +39,10 @@ describe('Bike Configurator', function () {
       .click();
   });
 
-  //Select an ST5s E-bike
+  //Select an E-bike
 
-  it.skip('Your Stromer -> ST5s', function () {
+  it('Your Stromer -> ST1', function () {
     cy.visit(`${config.baseUrl}`+'/nl/configurator?bike=st5s');
-
-    cy.get('[for="Farbe_ir"]')
-      .should('be.visible')
-      .click();
-    cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st5s.jpg');
-
-    cy.get('[for="Rahmengrösse_l0"]')
-      .should('be.visible')
-      .click();
-    cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st5sirspl0.jpg');
-
-    cy.get('[for="Federgabel_fe"]')
-      .should('be.visible')
-      .click();
-    cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st5sirspl0__fe.jpg');
-
-    cy.get('[for="Sattelstütze_ns"]')
-      .should('be.visible')
-      .click();
-    cy.get('[for="Sattelstütze_sa"]')
-      .should('be.visible')
-      .click();
-    cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st5sirspl0__fesa.jpg');
-
-    cy.get('[for="Federgabel_nf"]')
-      .should('be.visible')
-      .click();
-    cy.get('[for="Sattelstütze_ns"]')
-      .should('be.visible')
-      .click();
-    cy.get('[for="Sattelstütze_sa"]')
-      .should('be.visible')
-      .click();
-    cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st5sirspl0__nfsa.jpg');
-
-    cy.get('[for="Rahmengrösse_m0"]')
-      .should('be.visible')
-      .click();
-    cy.get('[for="Federgabel_fe"]')
-      .should('be.visible')
-      .click();
-    cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st5sirspm0__fe.jpg');
-
-    cy.get('[for="Sattelstütze_ns"]')
-      .should('be.visible')
-      .click();
-    cy.get('[for="Sattelstütze_sa"]')
-      .should('be.visible')
-      .click();
-    cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st5sirspm0__fesa.jpg');
-
-    cy.get('[for="Federgabel_nf"]')
-      .should('be.visible')
-      .click();
-    cy.get('[for="Sattelstütze_ns"]')
-      .should('be.visible')
-      .click();
-    cy.get('[for="Sattelstütze_sa"]')
-      .should('be.visible')
-      .click();
-    cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st5sirspm0__nfsa.jpg');
-
-    cy.get('[for="Rahmengrösse_xl"]')
-      .should('be.visible')
-      .click();
-    cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st5sirspxl.jpg');
-
-    cy.get('[for="Federgabel_fe"]')
-      .should('be.visible')
-      .click();
-    cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st5sirspxl__fe.jpg');
-
-    cy.get('[for="Sattelstütze_ns"]')
-      .should('be.visible')
-      .click();
-    cy.get('[for="Sattelstütze_sa"]')
-      .should('be.visible')
-      .click();
-    cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st5sirspxl__fesa.jpg');
-
-    cy.get('[for="Federgabel_nf"]')
-      .should('be.visible')
-      .click();
-    cy.get('[for="Sattelstütze_ns"]')
-      .should('be.visible')
-      .click();
-    cy.get('[for="Sattelstütze_sa"]')
-      .should('be.visible')
-      .click();
-    cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st5sirspxl__nfsa.jpg');
-
-    cy.get('[for="Farbe_ir"]')
-      .should('be.visible')
-      .click();
-    cy.get('[for="Rahmengrösse_l0"]')
-      .should('be.visible')
-      .click();
-    cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st5sirspl0.jpg');
-
-    cy.get('[for="Federgabel_fe"]')
-      .should('be.visible')
-      .click();
-    cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st5sirspl0__fe.jpg');
-
-    cy.get('[for="Sattelstütze_ns"]')
-      .should('be.visible')
-      .click();
-    cy.get('[for="Sattelstütze_sa"]')
-      .should('be.visible')
-      .click();
-    cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st5sirspl0__fesa.jpg');
-
-    cy.get('[for="Federgabel_nf"]')
-      .should('be.visible')
-      .click();
-    cy.get('[for="Sattelstütze_ns"]')
-      .should('be.visible')
-      .click();
-    cy.get('[for="Sattelstütze_sa"]')
-      .should('be.visible')
-      .click();
-    cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st5sirspl0__nfsa.jpg');
-
-    cy.get('[for="Rahmengrösse_m0"]')
-      .should('be.visible')
-      .click();
-    cy.get('[for="Federgabel_fe"]')
-      .should('be.visible')
-      .click();
-    cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st5sirspm0__fe.jpg');
-
-    cy.get('[for="Sattelstütze_ns"]')
-      .should('be.visible')
-      .click();
-    cy.get('[for="Sattelstütze_sa"]')
-      .should('be.visible')
-      .click();
-    cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st5sirspm0__fesa.jpg');
-
-    cy.get('[for="Federgabel_nf"]')
-      .should('be.visible')
-      .click();
-    cy.get('[for="Sattelstütze_ns"]')
-      .should('be.visible')
-      .click();
-    cy.get('[for="Sattelstütze_sa"]')
-      .should('be.visible')
-      .click();
-    cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st5sirspm0__nfsa.jpg');
-
-    cy.get('[for="Rahmengrösse_xl"]')
-      .should('be.visible')
-      .click();
-    cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st5sirspxl.jpg');
-
-    cy.get('[for="Federgabel_fe"]')
-      .should('be.visible')
-      .click();
-    cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st5sirspxl__fe.jpg');
-
-    cy.get('[for="Sattelstütze_ns"]')
-      .should('be.visible')
-      .click();
-    cy.get('[for="Sattelstütze_sa"]')
-      .should('be.visible')
-      .click();
-    cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st5sirspxl__fesa.jpg');
-
-    cy.get('[for="Federgabel_nf"]')
-      .should('be.visible')
-      .click();
-    cy.get('[for="Sattelstütze_ns"]')
-      .should('be.visible')
-      .click();
-    cy.get('[for="Sattelstütze_sa"]')
-      .should('be.visible')
-      .click();
-    cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st5sirspxl__nfsa.jpg');
     
     cy.get('[for="Farbe_ag"]')
       .should('be.visible')

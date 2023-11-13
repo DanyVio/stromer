@@ -3,6 +3,9 @@ describe('Bike Configurator', function () {
 
   beforeEach('before each test', function () {
     cy.visit(`${config.baseUrl}`);
+    cy.get('.Popup__PopupCloseInsideInner-sc-17yhal5-5 button')
+      .should('be.visible')
+      .click({ multiple: true });
     cy.get('.agree-button')
       .should('be.visible')
       .click({ force: true });

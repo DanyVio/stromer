@@ -3,6 +3,9 @@ describe('Bike Configurator', function () {
 
   beforeEach('before each test', function () {
     cy.visit(`${config.baseUrl}`);
+    cy.get('.Popup__PopupCloseInsideInner-sc-17yhal5-5 button')
+      .should('be.visible')
+      .click({ multiple: true });
     cy.get('.agree-button')
       .should('be.visible')
       .click({ force: true });
@@ -36,9 +39,9 @@ describe('Bike Configurator', function () {
       .click();
   });
 
-  //Select an ST50 E-bike
+  //Select an E-bike
 
-  it('Your Stromer -> ST50', function () {
+  it('Your Stromer -> ST1', function () {
     cy.visit(`${config.baseUrl}`+'/nl/configurator?bike=st50');
     
     cy.get('[for="Rahmengrösse_l0"]')
