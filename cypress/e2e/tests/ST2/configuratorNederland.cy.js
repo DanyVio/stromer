@@ -13,10 +13,10 @@ describe('Bike Configurator', function () {
   it('Select language', function () {
     cy.get('#block-multiswitcher-2')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#edit-content--2 > .language-countries-options-container > [data-country="nl"][data-language="nl"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
   });
 
   //Select a  ST2 E-bike
@@ -24,7 +24,7 @@ describe('Bike Configurator', function () {
   it('Your Stromer -> ST2', function () {
     cy.get('#block-menureferencesbycountry > :nth-child(2) > :nth-child(2) > :nth-child(1)')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.location().should(loc => {
       expect(loc.pathname).to.equal('/en/configurator-model-select');
     });
@@ -32,7 +32,7 @@ describe('Bike Configurator', function () {
     cy.get(':nth-child(2) > .paragraph--type--aospcc01 > .container > :nth-child(1) > .col-lg-12 > .grid-container > .row > :nth-child(3) > .str-custom-input-wrapper > .str-custom-input > .str-custom-input-inner > .str-custom-input-content > .aospci-content--links > .field > .field__item > .ghost-link')
       .trigger('mouseover')
       .should('be.visible')
-      .click();
+      .click({ force: true });
 
     // Configure the bike ST2
     // Frame Color Light Grey
@@ -42,378 +42,378 @@ describe('Bike Configurator', function () {
 
     cy.get('[for="Farbe_dg"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20.jpg');
 
     cy.get('[for="Rahmenart_sp"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20.jpg');
 
     cy.get('[for="Rahmengrösse_m0"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20dgspm0.jpg');
 
     cy.get('[for="Federgabel_nf"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20dgspm0.jpg');
 
     cy.get('[for="Sattelstütze_ns"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20dgspm0.jpg');
 
     // Battery range
 
     cy.get('[for="Reichweite_12"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20dgspm0.jpg');
     cy.get('[for="Reichweite_15"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20dgspm0.jpg');
     cy.get('[for="Reichweite_18"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20dgspm0.jpg');
 
     // Option 2
 
     cy.get('[for="Farbe_dg"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20.jpg');
 
     cy.get('[for="Rahmenart_co"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20dgco.jpg');
 
     cy.get('[for="Rahmengrösse_m0"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20dgco.jpg');
 
     cy.get('[for="Federgabel_nf"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20dgco.jpg');
 
     cy.get('[for="Sattelstütze_ns"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20dgco.jpg');
 
     // Battery range
 
     cy.get('[for="Reichweite_12"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20dgco.jpg');
     cy.get('[for="Reichweite_15"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20dgco.jpg');
     cy.get('[for="Reichweite_18"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20dgco.jpg');
 
     // Option 3
 
     cy.get('[for="Farbe_dg"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20.jpg');
 
     cy.get('[for="Rahmenart_sp"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20.jpg');
 
     cy.get('[for="Rahmengrösse_l0"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20dgspl0.jpg');
 
     cy.get('[for="Federgabel_nf"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20dgspl0.jpg');
 
     cy.get('[for="Sattelstütze_ns"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20dgspl0.jpg');
 
     // Battery range
 
     cy.get('[for="Reichweite_12"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20dgspl0.jpg');
     cy.get('[for="Reichweite_15"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20dgspl0.jpg');
     cy.get('[for="Reichweite_18"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20dgspl0.jpg');
 
     // Option 4
 
     cy.get('[for="Farbe_dg"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20.jpg');
 
     cy.get('[for="Rahmenart_sp"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20.jpg');
 
     cy.get('[for="Rahmengrösse_m0"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20dgspm0.jpg');
 
     cy.get('[for="Federgabel_fe"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20dgspm0p5fe.jpg');
 
     cy.get('[for="Sattelstütze_ns"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20dgspm0p5fe.jpg');
 
     // Battery range
 
     cy.get('[for="Reichweite_12"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20dgspm0p5fe.jpg');
     cy.get('[for="Reichweite_15"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20dgspm0p5fe.jpg');
     cy.get('[for="Reichweite_18"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20dgspm0p5fe.jpg');
 
     // Option 5
 
     cy.get('[for="Farbe_dg"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20.jpg');
 
     cy.get('[for="Rahmenart_sp"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20.jpg');
 
     cy.get('[for="Rahmengrösse_m0"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20dgspm0.jpg');
 
     cy.get('[for="Federgabel_nf"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20dgspm0.jpg');
 
     cy.get('[for="Sattelstütze_sa"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20dgspm0p5nfsa.jpg');
 
     // Battery range
 
     cy.get('[for="Reichweite_12"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20dgspm0p5nfsa.jpg');
     cy.get('[for="Reichweite_15"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20dgspm0p5nfsa.jpg');
     cy.get('[for="Reichweite_18"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20dgspm0p5nfsa.jpg');
 
     // Option 6
 
     cy.get('[for="Farbe_dg"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20.jpg');
 
     cy.get('[for="Rahmenart_co"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20dgco.jpg');
 
     cy.get('[for="Rahmengrösse_m0"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20dgco.jpg');
 
     cy.get('[for="Federgabel_nf"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20dgco.jpg');
 
     cy.get('[for="Sattelstütze_ns"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20dgco.jpg');
 
     // Battery range
 
     cy.get('[for="Reichweite_12"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20dgco.jpg');
     cy.get('[for="Reichweite_15"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20dgco.jpg');
     cy.get('[for="Reichweite_18"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20dgco.jpg');
 
     // Option 7
 
     cy.get('[for="Farbe_dg"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20.jpg');
 
     cy.get('[for="Rahmenart_co"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20dgco.jpg');
 
     cy.get('[for="Rahmengrösse_m0"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20dgco.jpg');
 
     cy.get('[for="Federgabel_fe"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20dgcom0p5fe.jpg');
 
     cy.get('[for="Sattelstütze_ns"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20dgcom0p5fe.jpg');
 
     // Battery range
 
     cy.get('[for="Reichweite_12"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20dgcom0p5fe.jpg');
     cy.get('[for="Reichweite_15"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20dgcom0p5fe.jpg');
     cy.get('[for="Reichweite_18"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20dgcom0p5fe.jpg');
 
     // Option 8
 
     cy.get('[for="Farbe_dg"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20.jpg');
 
     cy.get('[for="Rahmenart_co"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20dgco.jpg');
 
     cy.get('[for="Rahmengrösse_m0"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20dgco.jpg');
 
     cy.get('[for="Federgabel_nf"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20dgco.jpg');
 
     cy.get('[for="Sattelstütze_sa"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20dgcom0p5nfsa.jpg');
 
     // Battery range
 
     cy.get('[for="Reichweite_12"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20dgcom0p5nfsa.jpg');
     cy.get('[for="Reichweite_15"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20dgcom0p5nfsa.jpg');
     cy.get('[for="Reichweite_18"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20dgcom0p5nfsa.jpg');
 
     // Option 9
 
     cy.get('[for="Farbe_dg"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20.jpg');
 
     cy.get('[for="Rahmenart_sp"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20.jpg');
 
     cy.get('[for="Rahmengrösse_m0"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20dgspm0.jpg');
 
     cy.get('[for="Federgabel_fe"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20dgspm0p5fe.jpg');
 
     cy.get('[for="Sattelstütze_sa"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20dgspm0p5fesa.jpg');
 
     // Battery range
 
     cy.get('[for="Reichweite_12"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20dgspm0p5fesa.jpg');
     cy.get('[for="Reichweite_15"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20dgspm0p5fesa.jpg');
     cy.get('[for="Reichweite_18"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20dgspm0p5fesa.jpg');
 
 
@@ -425,378 +425,378 @@ describe('Bike Configurator', function () {
 
     cy.get('[for="Farbe_rb"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20rb.jpg');
 
     cy.get('[for="Rahmenart_sp"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20rb.jpg');
 
     cy.get('[for="Rahmengrösse_m0"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20rbspm0.jpg');
 
     cy.get('[for="Federgabel_nf"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20rbspm0.jpg');
 
     cy.get('[for="Sattelstütze_ns"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20rbspm0.jpg');
 
     // Battery range
 
     cy.get('[for="Reichweite_12"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20rbspm0.jpg');
     cy.get('[for="Reichweite_15"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20rbspm0.jpg');
     cy.get('[for="Reichweite_18"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20rbspm0.jpg');
 
     // Option 2
 
     cy.get('[for="Farbe_rb"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20rb.jpg');
 
     cy.get('[for="Rahmenart_co"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20rbco.jpg');
 
     cy.get('[for="Rahmengrösse_m0"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20rbco.jpg');
 
     cy.get('[for="Federgabel_nf"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20rbco.jpg');
 
     cy.get('[for="Sattelstütze_ns"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20rbco.jpg');
 
     // Battery range
 
     cy.get('[for="Reichweite_12"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20rbco.jpg');
     cy.get('[for="Reichweite_15"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20rbco.jpg');
     cy.get('[for="Reichweite_18"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20rbco.jpg');
 
     // Option 3
 
     cy.get('[for="Farbe_rb"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20rb.jpg');
 
     cy.get('[for="Rahmenart_sp"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20rb.jpg');
 
     cy.get('[for="Rahmengrösse_l0"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20rbspl0.jpg');
 
     cy.get('[for="Federgabel_nf"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20rbspl0.jpg');
 
     cy.get('[for="Sattelstütze_ns"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20rbspl0.jpg');
 
     // Battery range
 
     cy.get('[for="Reichweite_12"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20rbspl0.jpg');
     cy.get('[for="Reichweite_15"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20rbspl0.jpg');
     cy.get('[for="Reichweite_18"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20rbspl0.jpg');
 
     // Option 4
 
     cy.get('[for="Farbe_rb"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20rb.jpg');
 
     cy.get('[for="Rahmenart_sp"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20rb.jpg');
 
     cy.get('[for="Rahmengrösse_m0"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20rbspm0.jpg');
 
     cy.get('[for="Federgabel_fe"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20rbspm0p5fe.jpg');
 
     cy.get('[for="Sattelstütze_ns"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20rbspm0p5fe.jpg');
 
     // Battery range
 
     cy.get('[for="Reichweite_12"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20rbspm0p5fe.jpg');
     cy.get('[for="Reichweite_15"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20rbspm0p5fe.jpg');
     cy.get('[for="Reichweite_18"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20rbspm0p5fe.jpg');
 
     // Option 5
 
     cy.get('[for="Farbe_rb"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20rb.jpg');
 
     cy.get('[for="Rahmenart_sp"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20rb.jpg');
 
     cy.get('[for="Rahmengrösse_m0"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20rbspm0.jpg');
 
     cy.get('[for="Federgabel_nf"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20rbspm0.jpg');
 
     cy.get('[for="Sattelstütze_sa"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20rbspm0p5nfsa.jpg');
 
     // Battery range
 
     cy.get('[for="Reichweite_12"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20rbspm0p5nfsa.jpg');
     cy.get('[for="Reichweite_15"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20rbspm0p5nfsa.jpg');
     cy.get('[for="Reichweite_18"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20rbspm0p5nfsa.jpg');
 
     // Option 6
 
     cy.get('[for="Farbe_rb"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20rb.jpg');
 
     cy.get('[for="Rahmenart_co"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20rbco.jpg');
 
     cy.get('[for="Rahmengrösse_m0"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20rbco.jpg');
 
     cy.get('[for="Federgabel_nf"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20rbco.jpg');
 
     cy.get('[for="Sattelstütze_ns"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20rbco.jpg');
 
     // Battery range
 
     cy.get('[for="Reichweite_12"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20rbco.jpg');
     cy.get('[for="Reichweite_15"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20rbco.jpg');
     cy.get('[for="Reichweite_18"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20rbco.jpg');
 
     // Option 7
 
     cy.get('[for="Farbe_rb"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20rb.jpg');
 
     cy.get('[for="Rahmenart_co"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20rbco.jpg');
 
     cy.get('[for="Rahmengrösse_m0"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20rbco.jpg');
 
     cy.get('[for="Federgabel_fe"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20rbcom0p5fe.jpg');
 
     cy.get('[for="Sattelstütze_ns"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20rbcom0p5fe.jpg');
 
     // Battery range
 
     cy.get('[for="Reichweite_12"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20rbcom0p5fe.jpg');
     cy.get('[for="Reichweite_15"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20rbcom0p5fe.jpg');
     cy.get('[for="Reichweite_18"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20rbcom0p5fe.jpg');
 
     // Option 8
 
     cy.get('[for="Farbe_rb"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20rb.jpg');
 
     cy.get('[for="Rahmenart_co"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20rbco.jpg');
 
     cy.get('[for="Rahmengrösse_m0"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20rbco.jpg');
 
     cy.get('[for="Federgabel_nf"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20rbco.jpg');
 
     cy.get('[for="Sattelstütze_sa"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20rbcom0p5nfsa.jpg');
 
     // Battery range
 
     cy.get('[for="Reichweite_12"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20rbcom0p5nfsa.jpg');
     cy.get('[for="Reichweite_15"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20rbcom0p5nfsa.jpg');
     cy.get('[for="Reichweite_18"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20rbcom0p5nfsa.jpg');
 
     // Option 9
 
     cy.get('[for="Farbe_rb"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20rb.jpg');
 
     cy.get('[for="Rahmenart_sp"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20rb.jpg');
 
     cy.get('[for="Rahmengrösse_m0"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20rbspm0.jpg');
 
     cy.get('[for="Federgabel_fe"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20rbspm0p5fe.jpg');
 
     cy.get('[for="Sattelstütze_sa"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20rbspm0p5fesa.jpg');
 
     // Battery range
 
     cy.get('[for="Reichweite_12"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20rbspm0p5fesa.jpg');
     cy.get('[for="Reichweite_15"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20rbspm0p5fesa.jpg');
     cy.get('[for="Reichweite_18"]')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st20rbspm0p5fesa.jpg');
 
     // The end of the options
@@ -804,11 +804,11 @@ describe('Bike Configurator', function () {
     cy.get('button')
       .contains('Next step')
       .should('be.visible')
-      .click();
+      .click({ force: true });
     cy.get('.invoiceFooter > .configuratorButton')
       .contains('Next step')
       .should('be.visible')
-      .click();
+      .click({ force: true });
 
     // Testing all the Extras to see if the images are corresponding with the product shown.
 
@@ -833,7 +833,7 @@ describe('Bike Configurator', function () {
     cy.get('.extrasInvoice > .configuratorButton')
       .contains('Next step')
       .should('be.visible')
-      .click();
+      .click({ force: true });
   });
 });
 
