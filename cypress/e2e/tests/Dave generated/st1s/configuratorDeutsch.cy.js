@@ -14,7 +14,6 @@ describe('Bike Configurator', function () {
     cy.get('#block-multiswitcher-2')
       .should('be.visible')
       .click();
-
     cy.get('#edit-content--2 > .language-countries-options-container > [data-country="ch"][data-language="de"]')
       .should('be.visible')
       .click();
@@ -28,7 +27,6 @@ describe('Bike Configurator', function () {
     cy.get('#edit-content--2 > .language-countries-options-container > [data-country="ch"][data-language="de"]')
       .should('be.visible')
       .click();
-    
     cy.get('[for="Rahmengrösse_l0"]')
       .should('be.visible')
       .click();

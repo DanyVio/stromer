@@ -3,9 +3,9 @@ describe('Bike Configurator', function () {
 
   beforeEach('before each test', function () {
     cy.visit(`${config.baseUrl}`);
-    cy.get('.agree-button')
+    cy.get('#popup-buttons')
       .should('be.visible')
-      .click({ force: true });
+      .click({ multiple: true });
   });
 
   //Select a language and country
@@ -14,25 +14,9 @@ describe('Bike Configurator', function () {
     cy.get('#block-multiswitcher-2')
       .should('be.visible')
       .click();
-
-    cy.get('#aos-locale-multi-switcher-form--2 .custom-js-dropdown.custom-js-dropdown-language')
+    cy.get('#edit-content--2 > .language-countries-options-container > [data-country="ch"][data-language="de"]')
       .should('be.visible')
       .click();
-
-    cy.get('#aos-locale-multi-switcher-form--2 .custom-js-dropdown-option.custom-js-dropdown-language-option').contains('Deutsch')
-      .should('be.visible')
-      .click();
-
-    cy.get('#aos-locale-multi-switcher-form--2 [cdata-selector-target="aos-multi-switcher-country-selector"]')
-      .should('be.visible')
-      .click();
-
-    cy.get('#aos-locale-multi-switcher-form--2 .custom-js-dropdown-option.custom-js-dropdown-country-options').contains('Germany')
-      .should('be.visible')
-      .click();
-
-    cy.get('#edit-submit--2')
-      .click({force: true});
   });
 
     // Configure the bike ST1
@@ -40,7 +24,7 @@ describe('Bike Configurator', function () {
 
     
   it('Your Stromer -> ST1', function () {
-      cy.visit(`${config.baseUrl}`+'/de/configurator?bike=st10');
+    cy.visit(`${config.baseUrl}`+'/de/configurator?bike=st10');
 
     cy.get('[for="Farbe_lg"]')
       .should('be.visible')
