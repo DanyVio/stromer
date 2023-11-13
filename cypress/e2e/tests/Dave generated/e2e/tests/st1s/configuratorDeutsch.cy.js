@@ -3,12 +3,9 @@ describe('Bike Configurator', function () {
 
   beforeEach('before each test', function () {
     cy.visit(`${config.baseUrl}`);
-    cy.get('.Popup__PopupCloseInsideInner-sc-17yhal5-5 button')
+    cy.get(' #popup-buttons')
       .should('be.visible')
       .click({ multiple: true });
-    cy.get('.agree-button')
-      .should('be.visible')
-      .click({ force: true });
   });
 
   //Select a language and country
@@ -18,23 +15,7 @@ describe('Bike Configurator', function () {
       .should('be.visible')
       .click();
 
-    cy.get('#aos-locale-multi-switcher-form--2 .custom-js-dropdown.custom-js-dropdown-language')
-      .should('be.visible')
-      .click();
-
-    cy.get('#aos-locale-multi-switcher-form--2 .custom-js-dropdown-option.custom-js-dropdown-language-option').contains('Deutsch')
-      .should('be.visible')
-      .click();
-
-    cy.get('#aos-locale-multi-switcher-form--2 [cdata-selector-target="aos-multi-switcher-country-selector"]')
-      .should('be.visible')
-      .click();
-
-    cy.get('#aos-locale-multi-switcher-form--2 .custom-js-dropdown-option.custom-js-dropdown-country-options').contains('Germany')
-      .should('be.visible')
-      .click();
-
-    cy.get('#edit-submit--2')
+    cy.get('custom-language-option-item').contains('Switzerland')
       .should('be.visible')
       .click();
   });
