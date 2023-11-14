@@ -22,15 +22,10 @@ describe('Bike Configurator', function () {
   //Select a  ST2 E-bike
 
   it('Your Stromer -> ST2', function () {
+    cy.visit(`${config.baseUrl}`+'/nl/configurator?bike=ST2');
     cy.get('#edit-content--2 > .language-countries-options-container > [data-country="nl"][data-language="nl"]')
       .should('be.visible')
       .click({ force: true });
-    cy.get('#block-menureferencesbycountry > :nth-child(2) > :nth-child(2) > :nth-child(1)')
-      .should('be.visible')
-      .click({ force: true });
-    cy.location().should(loc => {
-      expect(loc.pathname).to.equal('/en/configurator-model-select');
-    });
 
     cy.get(':nth-child(2) > .paragraph--type--aospcc01 > .container > :nth-child(1) > .col-lg-12 > .grid-container > .row > :nth-child(3) > .str-custom-input-wrapper > .str-custom-input > .str-custom-input-inner > .str-custom-input-content > .aospci-content--links > .field > .field__item > .ghost-link')
       .trigger('mouseover')
