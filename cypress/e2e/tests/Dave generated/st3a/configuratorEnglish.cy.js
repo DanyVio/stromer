@@ -32,6 +32,8 @@ describe('Bike Configurator', function () {
     cy.get('[for="Rahmengrösse_l0"]')
       .should('be.visible')
       .click();
+    cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st3argspl0.jpg');
+
     cy.get('[for="Sitzposition_s2"]')
       .should('be.visible')
       .click();
@@ -80,9 +82,13 @@ describe('Bike Configurator', function () {
     cy.get('[for="Sitzposition_s5"]')
       .should('be.visible')
       .click();
+    cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st3argspl0s5.jpg');
+
     cy.get('[for="Federgabel_fe"]')
       .should('be.visible')
       .click();
+    cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st3argspl0s5fe.jpg');
+
     cy.get('[for="Sattelstütze_ns"]')
       .should('be.visible')
       .click();
@@ -95,6 +101,8 @@ describe('Bike Configurator', function () {
     cy.get('[for="Sattelstütze_sa"]')
       .should('be.visible')
       .click();
+    cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st3argspl0s5fesa.jpg');
+
     cy.get('[for="Pinion-Upgrade_ab"]')
       .should('be.visible')
       .click();
@@ -116,6 +124,8 @@ describe('Bike Configurator', function () {
     cy.get('[for="Sattelstütze_sa"]')
       .should('be.visible')
       .click();
+    cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st3argspl0s5nfsa.jpg');
+
     cy.get('[for="Pinion-Upgrade_ab"]')
       .should('be.visible')
       .click();
@@ -173,9 +183,13 @@ describe('Bike Configurator', function () {
     cy.get('[for="Sitzposition_s5"]')
       .should('be.visible')
       .click();
+    cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st3argspm0s5.jpg');
+
     cy.get('[for="Federgabel_fe"]')
       .should('be.visible')
       .click();
+    cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st3argspm0s5fe.jpg');
+
     cy.get('[for="Sattelstütze_ns"]')
       .should('be.visible')
       .click();
@@ -188,6 +202,8 @@ describe('Bike Configurator', function () {
     cy.get('[for="Sattelstütze_sa"]')
       .should('be.visible')
       .click();
+    cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st3argspm0s5fesa.jpg');
+
     cy.get('[for="Pinion-Upgrade_ab"]')
       .should('be.visible')
       .click();
@@ -209,6 +225,8 @@ describe('Bike Configurator', function () {
     cy.get('[for="Sattelstütze_sa"]')
       .should('be.visible')
       .click();
+    cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st3argspm0s5nfsa.jpg');
+
     cy.get('[for="Pinion-Upgrade_ab"]')
       .should('be.visible')
       .click();
@@ -218,6 +236,8 @@ describe('Bike Configurator', function () {
     cy.get('[for="Rahmengrösse_xl"]')
       .should('be.visible')
       .click();
+    cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st3argspxl.jpg');
+
     cy.get('[for="Sitzposition_s2"]')
       .should('be.visible')
       .click();
@@ -266,9 +286,13 @@ describe('Bike Configurator', function () {
     cy.get('[for="Sitzposition_s5"]')
       .should('be.visible')
       .click();
+    cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st3argspxls5.jpg');
+
     cy.get('[for="Federgabel_fe"]')
       .should('be.visible')
       .click();
+    cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st3argspxls5fe.jpg');
+
     cy.get('[for="Sattelstütze_ns"]')
       .should('be.visible')
       .click();
@@ -281,6 +305,8 @@ describe('Bike Configurator', function () {
     cy.get('[for="Sattelstütze_sa"]')
       .should('be.visible')
       .click();
+    cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st3argspxls5fesa.jpg');
+
     cy.get('[for="Pinion-Upgrade_ab"]')
       .should('be.visible')
       .click();
@@ -302,6 +328,8 @@ describe('Bike Configurator', function () {
     cy.get('[for="Sattelstütze_sa"]')
       .should('be.visible')
       .click();
+    cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st3argspxls5nfsa.jpg');
+
     cy.get('[for="Pinion-Upgrade_ab"]')
       .should('be.visible')
       .click();

@@ -29,6 +29,9 @@ describe('Bike Configurator', function () {
       .should('be.visible')
       .click();  
       
+    cy.get('[for="Farbe_gg"]')
+      .should('be.visible')
+      .click();
     cy.get('[for="Rahmengrösse_l0"]')
       .should('be.visible')
       .click();
@@ -113,6 +116,98 @@ describe('Bike Configurator', function () {
       .should('be.visible')
       .click();
     cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st5aggspxl__nfsa.jpg');
+
+    cy.get('[for="Farbe_ng"]')
+      .should('be.visible')
+      .click();
+    cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st5ang.jpg');
+
+    cy.get('[for="Rahmengrösse_l0"]')
+      .should('be.visible')
+      .click();
+    cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st5angspl0.jpg');
+
+    cy.get('[for="Federgabel_fe"]')
+      .should('be.visible')
+      .click();
+    cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st5angspl0__fe.jpg');
+
+    cy.get('[for="Sattelstütze_ns"]')
+      .should('be.visible')
+      .click();
+    cy.get('[for="Sattelstütze_sa"]')
+      .should('be.visible')
+      .click();
+    cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st5angspl0__fesa.jpg');
+
+    cy.get('[for="Federgabel_nf"]')
+      .should('be.visible')
+      .click();
+    cy.get('[for="Sattelstütze_ns"]')
+      .should('be.visible')
+      .click();
+    cy.get('[for="Sattelstütze_sa"]')
+      .should('be.visible')
+      .click();
+    cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st5angspl0__nfsa.jpg');
+
+    cy.get('[for="Rahmengrösse_m0"]')
+      .should('be.visible')
+      .click();
+    cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st5angspm0.jpg');
+
+    cy.get('[for="Federgabel_fe"]')
+      .should('be.visible')
+      .click();
+    cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st5angspm0__fe.jpg');
+
+    cy.get('[for="Sattelstütze_ns"]')
+      .should('be.visible')
+      .click();
+    cy.get('[for="Sattelstütze_sa"]')
+      .should('be.visible')
+      .click();
+    cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st5angspm0__fesa.jpg');
+
+    cy.get('[for="Federgabel_nf"]')
+      .should('be.visible')
+      .click();
+    cy.get('[for="Sattelstütze_ns"]')
+      .should('be.visible')
+      .click();
+    cy.get('[for="Sattelstütze_sa"]')
+      .should('be.visible')
+      .click();
+    cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st5angspm0__nfsa.jpg');
+
+    cy.get('[for="Rahmengrösse_xl"]')
+      .should('be.visible')
+      .click();
+    cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st5angspxl.jpg');
+
+    cy.get('[for="Federgabel_fe"]')
+      .should('be.visible')
+      .click();
+    cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st5angspxl__fe.jpg');
+
+    cy.get('[for="Sattelstütze_ns"]')
+      .should('be.visible')
+      .click();
+    cy.get('[for="Sattelstütze_sa"]')
+      .should('be.visible')
+      .click();
+    cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st5angspxl__fesa.jpg');
+
+    cy.get('[for="Federgabel_nf"]')
+      .should('be.visible')
+      .click();
+    cy.get('[for="Sattelstütze_ns"]')
+      .should('be.visible')
+      .click();
+    cy.get('[for="Sattelstütze_sa"]')
+      .should('be.visible')
+      .click();
+    cy.get('#bikepreviewimg').should('have.prop', 'src', 'https://www.stromerbike.com/bike-configurator/img/bikes/st5angspxl__nfsa.jpg');
 
 
     // The end of the options
