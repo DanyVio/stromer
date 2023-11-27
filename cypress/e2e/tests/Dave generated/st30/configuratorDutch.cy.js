@@ -22,7 +22,7 @@ describe('Bike Configurator', function () {
 
   //Select an E-bike
 
-  it('Your Stromer -> ST1', function () {
+  it('Your Stromer -> ST30', function () {
     cy.visit(`${config.baseUrl}`+'/nl/configurator?bike=st30');
 
     cy.get('#edit-content--2 > .language-countries-options-container > [data-country="nl"][data-language="nl"]')
