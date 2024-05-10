@@ -3,7 +3,7 @@ describe('Bike Configurator', function () {
 
   beforeEach('before each test', function () {
     cy.visit(`${config.baseUrl}`);
-    cy.get('#popup-buttons')
+    cy.get('#CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll')
       .should('be.visible')
       .click({ multiple: true });
   });
