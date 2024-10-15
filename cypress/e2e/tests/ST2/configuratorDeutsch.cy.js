@@ -1,3 +1,4 @@
+/*
 // let config = Cypress.config()
 // describe('Bike Configurator', function () {
 
@@ -836,3 +837,4 @@
 // });
 
 
+*/
